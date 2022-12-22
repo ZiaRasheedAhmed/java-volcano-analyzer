@@ -150,7 +150,15 @@
     "deaths": ""
   },
   {
-    "year": -1750"deaths": ""507,
+    "year": -1750,
+    "tsu": "",
+    "eq": "",
+    "name": "Veniaminof",
+    "location": "Alaska Peninsula",
+    "country": "United States",
+    "latitude": 56.17,
+    "longitude": -159.38,
+    "elevation": 2507,
     "type": "Stratovolcano",
     "vei": 6,
     "agent": "",

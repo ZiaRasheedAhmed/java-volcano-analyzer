@@ -159,20 +159,20 @@ public class VolcanoAnalyzerTests {
         assertEquals( expected3, actual3, "should be 0 eruptions in Zimbabwe");
         //Teardown
     }
+// 7. Return the average elevation of all eruptions.
+    @Test
+    public void averageElevation() {
+        //Setup
+        double expected = 1993.71;
 
-    // @Test
-    // public void averageElevation() {
-    //     //Setup
-    //     double expected = 1993.71;
+        //Execute
+        double actual = va.averageElevation();
 
-    //     //Execute
-    //     double actual = va.averageElevation();
+        //Assert
+        assertEquals( expected, actual, .1, "should be about 1993.71");
 
-    //     //Assert
-    //     assertEquals( expected, actual, .1, "should be about 1993.71");
-
-    //     //Teardown
-    // }
+        //Teardown
+    }
 
     // @Test
     // public void volcanoTypes() {

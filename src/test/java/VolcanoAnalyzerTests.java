@@ -112,20 +112,20 @@ public class VolcanoAnalyzerTests {
         assertEquals( expected.getDEATHS(), actual.getDEATHS(), "should have correct DEATHS");
         //Teardown
     }
+//4. Return the percentage of eruptions that caused tsunamis.
+    @Test
+    public void causedTsunami() {
+        //Setup
+        double expected = 17;
 
-    // @Test
-    // public void causedTsunami() {
-    //     //Setup
-    //     double expected = 17;
+        //Execute
+        double actual = va.causedTsunami();
 
-    //     //Execute
-    //     double actual = va.causedTsunami();
+        //Assert
+        assertEquals( expected, actual, .1, "should be about 17.0 percent");
 
-    //     //Assert
-    //     assertEquals( expected, actual, .1, "should be about 17.0 percent");
-
-    //     //Teardown
-    // }
+        //Teardown
+    }
 
     // @Test
     // public void mostCommonType() {

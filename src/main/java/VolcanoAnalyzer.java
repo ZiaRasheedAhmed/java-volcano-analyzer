@@ -47,4 +47,8 @@ public class VolcanoAnalyzer {
     public Volcano mostDeadly (){
         return volcanos.stream().max(Comparator.comparing(a -> Integer.parseInt(a.getDEATHS().isEmpty()?"0":a.getDEATHS()))).get();
     }
+//4. Return the percentage of eruptions that caused tsunamis.
+    public double causedTsunami(){
+        return volcanos.stream().filter(i -> i.getTsu().equals("tsu")).collect(Collectors.toList()).size() *100 / volcanos.size();
+    }
 }

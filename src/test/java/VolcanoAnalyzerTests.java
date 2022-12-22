@@ -126,20 +126,20 @@ public class VolcanoAnalyzerTests {
 
         //Teardown
     }
+//5. Return the most common type of volcano in the set.
+    @Test
+    public void mostCommonType() {
+        //Setup
+        String expected = "Stratovolcano";
 
-    // @Test
-    // public void mostCommonType() {
-    //     //Setup
-    //     String expected = "Stratovolcano";
+        //Execute
+        String actual = va.mostCommonType();
 
-    //     //Execute
-    //     String actual = va.mostCommonType();
+        //Assert
+        assertEquals( expected, actual, "should be Stratovolcano");
 
-    //     //Assert
-    //     assertEquals( expected, actual, "should be Stratovolcano");
-
-    //     //Teardown
-    // }
+        //Teardown
+    }
 
     // @Test
     // public void eruptionsByCountry() {

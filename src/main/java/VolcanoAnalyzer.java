@@ -3,6 +3,9 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -50,5 +53,14 @@ public class VolcanoAnalyzer {
 //4. Return the percentage of eruptions that caused tsunamis.
     public double causedTsunami(){
         return volcanos.stream().filter(i -> i.getTsu().equals("tsu")).collect(Collectors.toList()).size() *100 / volcanos.size();
+    }
+//5. Return the most common type of volcano in the set.
+    public String mostCommonType(){
+        List<String> commonType = volcanos.stream().map(i->i.getType()).distinct().collect(Collectors.toList());
+        List<Integer> countList = new ArrayList<>();
+        commonType.forEach(element -> {
+         countList.add( volcanos.stream().filter(i -> i.getType().equals(element)).collect(Collectors.toList()).size());
+        });
+        return commonType.get(countList.indexOf(Collections.max(countList)));
     }
 }

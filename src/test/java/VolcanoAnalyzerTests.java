@@ -45,20 +45,20 @@ public class VolcanoAnalyzerTests {
 
         //Teardown
     }
+//1. Return the volcanoes that erupted in the 1980s.
+    @Test
+    public void eruptedInEighties() {
+        //Setup
+        Integer expected = 40;
 
-    // @Test
-    // public void eruptedInEighties() {
-    //     //Setup
-    //     Integer expected = 40;
+        //Execute
+        Integer actual = va.eruptedInEighties().size();
 
-    //     //Execute
-    //     Integer actual = va.eruptedInEighties().size();
+        //Assert
+        assertEquals(expected, actual, "should have 40 volcanoes");
 
-    //     //Assert
-    //     assertEquals(expected, actual, "should have 40 volcanoes");
-
-    //     //Teardown
-    // }
+        //Teardown
+    }
 
     // @Test
     // public void highVEI() {

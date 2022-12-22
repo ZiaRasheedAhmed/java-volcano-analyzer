@@ -73,4 +73,9 @@ public class VolcanoAnalyzer {
         double d= summ/volcanos.size();
         return d;
     }
+//8. Return an array of types of volcanoes.
+    public String[] volcanoTypes(){
+        String[] types = volcanos.stream().map(i->i.getType()).distinct().toArray(String[]::new);
+        return types;
+    }
 }

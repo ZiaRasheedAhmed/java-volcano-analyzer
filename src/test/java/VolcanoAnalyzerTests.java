@@ -140,25 +140,25 @@ public class VolcanoAnalyzerTests {
 
         //Teardown
     }
+//6. Return the number of eruptions when supplied a country as an argument.
+    @Test
+    public void eruptionsByCountry() {
+        //Setup
+        int expected1 = 47;
+        int expected2 = 189;
+        int expected3 = 0;
 
-    // @Test
-    // public void eruptionsByCountry() {
-    //     //Setup
-    //     int expected1 = 47;
-    //     int expected2 = 189;
-    //     int expected3 = 0;
+        //Execute
+        int actual1 = va.eruptionsByCountry("United States");
+        int actual2 = va.eruptionsByCountry("Indonesia");
+        int actual3 = va.eruptionsByCountry("Zimbabwe");
 
-    //     //Execute
-    //     int actual1 = va.eruptionsByCountry("United States");
-    //     int actual2 = va.eruptionsByCountry("Indonesia");
-    //     int actual3 = va.eruptionsByCountry("Zimbabwe");
-
-    //     //Assert
-    //     assertEquals(expected1, actual1, "should be 47 eruptions in United States");
-    //     assertEquals( expected2, actual2, "should be 189 eruptions in Indonesia");
-    //     assertEquals( expected3, actual3, "should be 0 eruptions in Zimbabwe");
-    //     //Teardown
-    // }
+        //Assert
+        assertEquals(expected1, actual1, "should be 47 eruptions in United States");
+        assertEquals( expected2, actual2, "should be 189 eruptions in Indonesia");
+        assertEquals( expected3, actual3, "should be 0 eruptions in Zimbabwe");
+        //Teardown
+    }
 
     // @Test
     // public void averageElevation() {

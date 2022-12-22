@@ -63,4 +63,8 @@ public class VolcanoAnalyzer {
         });
         return commonType.get(countList.indexOf(Collections.max(countList)));
     }
+//6. Return the number of eruptions when supplied a country as an argument.
+    public int eruptionsByCountry(String country){
+        return volcanos.stream().filter(i->i.getCountry().equals(country)).collect(Collectors.toList()).size();
+    }
 }

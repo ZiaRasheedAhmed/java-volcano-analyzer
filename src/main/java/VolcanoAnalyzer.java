@@ -38,4 +38,9 @@ public class VolcanoAnalyzer {
         return volcanos.stream().filter(i -> i.getYear() >= 1980 && i.getYear()<1990).collect(Collectors.toList());
     } 
 
+//2. Return an array of the names of volcanoes that had an eruption with a Volcanic Explosivity Index (VEI) of 6 or higher.
+    public String[] highVEI() {
+        return volcanos.stream().filter(i -> i.getVEI() >= 6).map(Volcano::getName).toArray(String[]::new);
+    }
+
 }

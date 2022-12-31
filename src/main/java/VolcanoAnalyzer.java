@@ -12,6 +12,8 @@ import java.util.Optional;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+import javax.lang.model.element.Element;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 
@@ -100,4 +102,11 @@ public class VolcanoAnalyzer {
     public String[] elevatedVolcanoes(int e) {
         return volcanos.stream().filter(i -> i.getElevation() >= e).map(Volcano::getName).toArray(String[]::new);
     }
+// 12. Return the agents of death for the ten most deadly eruptions.
+public String[] topAgentsOfDeath(){
+    String[] agents = volcanos.stream().sorted((i,j)->Integer.compare(Integer.parseInt(i.getDEATHS().isEmpty()?"0" : i.getDEATHS()),
+    Integer.parseInt(j.getDEATHS().isEmpty()?"0" : j.getDEATHS()))).limit(10).map(Volcano::getAgent).distinct().toArray(String[]::new);
+    return agents;
+    // return volcanos.stream().(i->Integer.parseInt(i.getDEATHS().isEmpty()?"0":i.getDEATHS())).get();
+}
 }

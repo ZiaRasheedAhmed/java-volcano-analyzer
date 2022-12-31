@@ -78,4 +78,13 @@ public class VolcanoAnalyzer {
         String[] types = volcanos.stream().map(i->i.getType()).distinct().toArray(String[]::new);
         return types;
     }
+// 9. Return the percentage of eruptions that occurred in the Northern
+    // Hemisphere.
+    public double percentNorth() {
+        double sum = volcanos.stream().filter(i -> i.getLatitude() >= 0 && i.getLatitude() <= 90)
+                .collect(Collectors.toList()).size();
+        double d = sum / volcanos.size();
+        double per = d * 100;
+        return per;
+    }
 }

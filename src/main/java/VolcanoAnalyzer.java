@@ -95,4 +95,9 @@ public class VolcanoAnalyzer {
                 .toArray(String[]::new);
         return names;
     }
+// 11. Return the names of eruptions that occurred at or above an elevation
+    // passed in as an argument.
+    public String[] elevatedVolcanoes(int e) {
+        return volcanos.stream().filter(i -> i.getElevation() >= e).map(Volcano::getName).toArray(String[]::new);
+    }
 }

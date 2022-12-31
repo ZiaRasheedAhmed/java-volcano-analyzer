@@ -87,4 +87,12 @@ public class VolcanoAnalyzer {
         double per = d * 100;
         return per;
     }
+// 10. Return the names of eruptions that occurred after 1800, that did NOT
+    // cause a tsunami, happened in the Southern Hemisphere, and had a VEI of 5.
+    public String[] manyFilters() {
+        String[] names = volcanos.stream().filter(i -> i.getYear() > 1800 && i.getTsu().equals("")
+                && i.getLatitude() <= 0 && i.getLatitude() >= -90 && i.getVEI() == 5).map(j -> j.getName())
+                .toArray(String[]::new);
+        return names;
+    }
 }
